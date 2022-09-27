@@ -30,7 +30,7 @@ st.dataframe(df)  # Same as st.write(df)
 
 st.line_chart(chart_data)
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
    st.header("A cat")
@@ -40,7 +40,6 @@ with col2:
    st.header("A dog")
    st.image("https://static.streamlit.io/examples/dog.jpg")
     
-from PIL import Image
-image = Image.open('sunrise.jpg')
-
-st.image(image, caption='Sunrise by the mountains')
+with col3:
+   st.header("An owl")
+   st.image("https://static.streamlit.io/examples/owl.jpg")
