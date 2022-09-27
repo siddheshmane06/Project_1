@@ -16,6 +16,18 @@ chart_data = pd.DataFrame(
     np.random.randn(20, 3),
     columns=['a', 'b', 'c'])
 
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
+
+st.area_chart(chart_data)
+
+df = pd.DataFrame(
+   np.random.randn(50, 20),
+   columns=('col %d' % i for i in range(20)))
+
+st.dataframe(df)  # Same as st.write(df)
+
 st.line_chart(chart_data)
 
 col1, col2 = st.columns(2)
@@ -27,3 +39,8 @@ with col1:
 with col2:
    st.header("A dog")
    st.image("https://static.streamlit.io/examples/dog.jpg")
+    
+from PIL import Image
+image = Image.open('sunrise.jpg')
+
+st.image(image, caption='Sunrise by the mountains')
