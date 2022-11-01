@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-st.title("Siddhesh")
+st.title("Siddhesh Mane")
 
 st.write("MSC-DSAI")
 st.header("Pycharm")
